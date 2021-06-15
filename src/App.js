@@ -36,7 +36,7 @@ function App (props) {
       <ThemeContext.Provider value={themeState}>
         <UserContext.Provider value={user}>
           <Header />
-          <CatWithMouse />
+          {/* <CatWithMouse /> */}
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/contacts' component={Contacts} />
