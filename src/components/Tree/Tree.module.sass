@@ -1,0 +1,15 @@
+@import '../../common/styles/templates.scss';
+
+.container
+  border: 3px solid
+  padding: 20px
+
+.lightTheme
+  @extend %lightTheme
+  &, & *
+    border-color: solid black !important
+
+.darkTheme
+  @extend %darkTheme
+  &, & *
+    border-color: white !important

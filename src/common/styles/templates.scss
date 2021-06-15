@@ -1,0 +1,15 @@
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+%lightTheme {
+  background-color: white;
+  color: black;
+}
+
+%darkTheme {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "samsung galaxy S8",
+    "price": 6000
+  },
+  {
+    "id": 2,
+    "name": "nokia 3310",
+    "price": 1000
+  },
+  {
+    "id": 3,
+    "name": "iphone",
+    "price": 1200
+  }
+]
