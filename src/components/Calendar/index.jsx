@@ -1,24 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from './Calendar.module.sass';
-import {endOfMonth, startOfMonth, add, getWeeksInMonth, startOfWeek, eachWeekOfInterval} from 'date-fns';
-import Week from "./Week";
-import CalendarHeader from "./CalendarHeader";
+import CurrentDay from './CurrentDay';
+import CalendarBody from './CalendarBody';
 
-
-
-export default function Calendar() {
-  const [currentDate, setCurrentDate] = useState(new Date());
-  const weeksInMonthArray = eachWeekOfInterval({
-    start: startOfMonth(currentDate),
-    end: endOfMonth(currentDate),
-  });
-
-  console.dir(weeksInMonthArray);
-  const weeks = weeksInMonthArray.map(weekStartDate => <Week startDate = {weekStartDate} key={weekStartDate.toLocaleDateString()}/>)
+ function Calendar () {
   return (
- <div className={style.container}>
-   <CalendarHeader />
-   {weeks}
- </div>
+    <div className = {style.container}>
+      <CurrentDay />
+      <CalendarBody />
+
+    </div>
   )
 }
+export default Calendar;
