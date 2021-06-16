@@ -12,7 +12,6 @@ export default function FormInput (props) {
     type = 'text',
   } = props;
   const isValid = value.length === 0 || validationRegex.test(value);
-  console.log(name, isValid);
   return (
     <input
       name={name}

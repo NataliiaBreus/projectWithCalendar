@@ -10,8 +10,9 @@ import PhonesLoader from './components/PhonesLoader';
 import MouseTrackerPage from './pages/MouseTrackerPage';
 import Tree from './components/Tree';
 import Home from './pages/Home';
+import SignUpPage from './pages/SignUpPage';
 import { UserContext, ThemeContext } from './contexts';
-
+import Chat from './components/Chat';
 import CONSTANTS from './constants';
 import onlyAdmin from './components/HOCs/onlyAdmin';
 import CatWithMouse from './components/CatWithMouse';
@@ -39,6 +40,8 @@ function App (props) {
           {/* <CatWithMouse /> */}
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route path = '/signUp' component = {SignUpPage} />
+            <Route path = '/chat' component = {Chat} />
             <Route path='/contacts' component={Contacts} />
             <Route path='/about' component={About} />
             <Route path='/counter' component={CounterPage} />

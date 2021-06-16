@@ -1,9 +1,10 @@
 import React, { useReducer } from 'react';
 import style from './SignUpForm.module.scss';
 import FormInput from './FormInput';
-import * as constants from '../../constants';
+import constants from '../../constants';
+import { reducer } from './reducer';
 
-const intialValues = {
+const initialValues = {
   firstname: '',
   lastname: '',
   email: '',
@@ -59,7 +60,7 @@ function SignUpForm (props) {
     </form>
   );
 }
-
+export default SignUpForm;
 
 /*
 class SignUpForm extends Component {
@@ -119,5 +120,4 @@ class SignUpForm extends Component {
   }
 }
 
-export default SignUpForm;
 */
