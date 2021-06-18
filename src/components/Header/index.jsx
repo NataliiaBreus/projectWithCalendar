@@ -11,15 +11,7 @@ import Button from '../Button';
 const { THEMES } = CONSTANTS;
 
 function Header ({ theme, setTheme }) {
-  /*
-    1. Сделать навигационное меню с использованием Link или NavLink
-    2. Стилизовать навигационное меню
-    3. Создать страницы:
-      3.1 SignUpPage (с использованием компонента SignUpForm)
-      3.2 UsersPage (с использованием компонента UserList)
-      3.3 CounterPage (с использованием компонента Counter)
-      3.4 NotFoundPage (Ошибка 404)
-  */
+ 
   const isLightMode = theme === THEMES.LIGHT;
 
   const classes = cx(style.header, {
@@ -38,6 +30,8 @@ function Header ({ theme, setTheme }) {
           <NavItem to='/about'>About</NavItem>
           <NavItem to='/counter'>Counter</NavItem>
           <NavItem to='/calendar'>Calendar</NavItem>
+          <NavItem to='/toDoList'>To Do List</NavItem>
+          <NavItem to='/signUpForm'>SignUpForm</NavItem>
           <NavItem to='/tracker'>Tracker</NavItem>
         </ul>
       </nav>
