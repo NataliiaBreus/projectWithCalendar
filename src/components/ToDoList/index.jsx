@@ -12,7 +12,7 @@ const handleChange = (event) => {
 const AddTask = () => {
 if (task !== "") {
   const taskDetails = {
-    id: Math.floor(Math.random()*1000), 
+    id: Math.floor(Math.random()*10000), 
     value: task,
     isCompleted: false,
   }
@@ -25,9 +25,22 @@ if (task !== "") {
    setTaskList(tasklist.filter((task) =>task.id != id));
  };
 
+ const taskCompleted = (event, id) =>{
+   event.preventDefault ();
+   const element = tasklist.findIndex((elem) => elem.id == id);
+   const newTaskList = [...tasklist];
+   newTaskList[element] = {
+     ...newTaskList[element],
+     isCompleted: true,
+   };
+
+   setTaskList(newTaskList);
+ };
+
   return (<div className={style.todo}>
     <h1 className={style.title}>TODO LIST</h1>
-    <input 
+    <div className={style.inputWrapper}>
+    <input className={style.input}
     type = "text" 
     name="text" 
     id = "text"
@@ -39,11 +52,13 @@ if (task !== "") {
       Add
       </button>
       <br />
+    </div>
+     
       {tasklist !== [] ? (
-        <ul>
+        <ul className={style.ul}>
           {tasklist.map((task) =>(
-            <li className = {style.listItem}>{task.value}
-            <button className={style.completedBtn}>Completed</button>
+            <li className = {task.isCompleted ? style.crossText : style.listItem}>{task.value}
+            <button className={style.completedBtn} onClick = {(event) =>taskCompleted(event, task.id)}>Completed</button>
             <button className={style.deleteBtn} onClick = {(event) =>deletetask(event, task.id)}>Delete</button>
             </li>
           ))}
