@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'
 import style from "./ToDoList.module.sass";
+
 
 function ToDoList () {
 const [task, setTask] = useState("");
@@ -67,5 +69,6 @@ if (task !== "") {
   </div>
   );
 }
+
 
 export default ToDoList;

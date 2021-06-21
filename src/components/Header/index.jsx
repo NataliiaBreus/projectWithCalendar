@@ -31,6 +31,7 @@ function Header ({ theme, setTheme }) {
           <NavItem to='/counter'>Counter</NavItem>
           <NavItem to='/calendar'>Calendar</NavItem>
           <NavItem to='/toDoList'>To Do List</NavItem>
+          <NavItem to='/slider'>Slider</NavItem>
           <NavItem to='/signUpForm'>SignUpForm</NavItem>
           <NavItem to='/tracker'>Tracker</NavItem>
         </ul>

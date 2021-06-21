@@ -14,6 +14,7 @@ import SignUpPage from './pages/SignUpPage';
 import { UserContext, ThemeContext } from './contexts';
 import Chat from './components/Chat';
 import ToDoList from './components/ToDoList';
+import Slider from './components/Slider';
 import CONSTANTS from './constants';
 import onlyAdmin from './components/HOCs/onlyAdmin';
 import CatWithMouse from './components/CatWithMouse';
@@ -48,6 +49,7 @@ function App (props) {
             <Route path='/counter' component={CounterPage} />
             <Route path='/calendar' component={Calendar} />
             <Route path='/toDoList' component={ToDoList} />
+            <Route path='/slider' component={Slider} />
             <Route path='/users' component={UserLoader} />
             <Route path='/phones' component={PhonesLoader} />
             <Route path='/tracker' component={MouseTrackerPage} />
