@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import WindowSizes from './components/WindowSizes';
 import CounterPage from './pages/CounterPage';
 import Header from './components/Header';
-import Calendar from './components/Calendar';
+import CalendarPage from './pages/CalendarPage';
 import UserLoader from './components/UserLoader';
 import PhonesLoader from './components/PhonesLoader';
 import MouseTrackerPage from './pages/MouseTrackerPage';
@@ -13,8 +13,8 @@ import Home from './pages/Home';
 import SignUpPage from './pages/SignUpPage';
 import { UserContext, ThemeContext } from './contexts';
 import Chat from './components/Chat';
-import ToDoList from './components/ToDoList';
-import Slider from './components/Slider';
+import ToDoListPage from './pages/ToDoListPage';
+import SliderPage from './pages/SliderPage';
 import CONSTANTS from './constants';
 import onlyAdmin from './components/HOCs/onlyAdmin';
 import CatWithMouse from './components/CatWithMouse';
@@ -47,9 +47,9 @@ function App (props) {
             <Route path='/contacts' component={Contacts} />
             <Route path='/about' component={About} />
             <Route path='/counter' component={CounterPage} />
-            <Route path='/calendar' component={Calendar} />
-            <Route path='/toDoList' component={ToDoList} />
-            <Route path='/slider' component={Slider} />
+            <Route path='/calendar' component={CalendarPage} />
+            <Route path='/toDoList' component={ToDoListPage} />
+            <Route path='/slider' component={SliderPage} />
             <Route path='/users' component={UserLoader} />
             <Route path='/phones' component={PhonesLoader} />
             <Route path='/tracker' component={MouseTrackerPage} />

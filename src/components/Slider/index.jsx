@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
+import SliderData from './SliderData';
 import style from "./Slider.module.sass";
 
-function Slider () {
+const Slider = () => {
+  const [current, setCurrent] = useState(0)
+  const length = slides.length
+
+
    return (
-     <div>
+     <>
+     {SliderData.map((slide, index) =>{
+       return <img src={slide.image} alt = 'nature image' />
+     })}
+     </>
+   );
+};
 
-     </div>
-   )
-}
-
-export default Slider
+export default Slider;
