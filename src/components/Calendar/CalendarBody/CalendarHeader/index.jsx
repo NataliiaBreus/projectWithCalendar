@@ -4,7 +4,8 @@ export default function CalendarHeader(){
   const arrOfDayNames = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
   return(
     <div className={style.container}>
-      {arrOfDayNames.map(dayName => <div className={style.weekDayName}>{dayName}</div>)}
+      {arrOfDayNames.map(dayName => (
+      <div className={style.weekDayName} key={dayName}>{dayName}</div>))}
     </div>
-  )
+  );
 }

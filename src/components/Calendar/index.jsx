@@ -10,6 +10,6 @@ import CalendarBody from './CalendarBody';
       <CalendarBody />
 
     </div>
-  )
+  );
 }
 export default Calendar;

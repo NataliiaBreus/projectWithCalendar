@@ -1,11 +1,15 @@
 import React from 'react';
 import style from './Day.module.sass';
-import {format} from 'date-fns';
-
-export default function Day ({day}){
-  return (
-    <div className={style.container}>
+import {format, isToday, isSameMonth} from 'date-fns';
+import cx from 'classnames';
+ function Day ({day, currentMonthDate}){
+   const classes = cx(style.container, {
+     [style.currentDay]: isToday(day),
+     [style.otherMonthDay]: !isSameMonth(day, currentMonthDate),
+   });
+  return 
+    <div className={classes}>
       {format(day, 'dd')}
-    </div>
-  )
+    </div>;
 }
+export default Day;
